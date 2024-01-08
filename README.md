@@ -5,8 +5,8 @@ Demeter is an Arduino & Raspberry Pi-based hydroponics robot.
 ![](./docs/demeter-splash.png)
 
 Presently, it tracks:
-- water level high 
-- water level low
+- water level high (redundant float switches)
+- water level low (redundant float switches)
 - water pH 
 - water temperature
 - water TDS (Total Dissolved Solids ppm)
