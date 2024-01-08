@@ -9,7 +9,7 @@ Presently, it tracks:
 - water level low
 - water pH 
 - water temperature
-- water TDS
+- water TDS (Total Dissolved Solids ppm)
 - volume of distilled/RO water dispensed
 - volume of pH buffer dispensed
 
