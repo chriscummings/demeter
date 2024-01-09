@@ -27,4 +27,44 @@ The Arduino side is C and the Raspberry Pi side is Python 3. Tested on a 13 year
 
 
 
+## System Tour
 
+### Redundant Float Switches
+![](./docs/float-switches.png)
+
+These floats still need to be shrouded to protect them from tangling roots. For both min and max water levels, two float switches are wired in series. 
+
+#### Max Level Floats
+The maximum level float switches are oriented normally-closed. Only one max level switch needs to open (rise) for the system to respond. 
+
+#### Min Level Floats
+While also wired in series, the minimum float switches are, however, oriented normally-open. Both minimum floats must close (sink) before the system will respond.
+
+### Peristaltic Pumps & Magnetic Stirrer
+![](./docs/peristaltics.png)
+
+Water ATO (Auto Top-Off) and pH buffer solution pumps. The buffer needs to be mixed prior to pumping. An additional, third pump inside the reservoir circulates the water during buffer administration.
+
+### Control Board
+![](./docs/enclosure.png)
+
+The control board has 3 different DC voltage circuits: 
+- 3.3v via Arduino (TDS sensor)
+- 5v via Arduino (pH sensor, magnetic stirrer, temperature probe)
+- 12v via external power supply (2 peristaltic pumps, 1 circulation pump)
+
+-and includes:
+- Arduino Uno
+- Raspberry Pi 4 B
+- 128x64 OLED display
+- 8 channel relay board
+- 4 channel logic level shifter
+	- (no longer in use - while Serial communication via GPIO pins worked fine, I found I couldn't deploy sketches via the shifter without additional wiring modifications so I disconnected it and went back to relying on an actual USB cable between Arduino and Pi)
+- pH sensor board
+- TDS sensor board
+
+
+### Testing
+![](./docs/bucket.png)
+
+Day 2. I currently tweaking the software, using a mature peace lily as a test subject.
