@@ -64,4 +64,4 @@ The control board has 3 different DC voltage circuits:
 ### Testing
 ![](./docs/bucket.png)
 
-Day 2 of transplant shock..
+Day 2 of transplant shock.. This peace lily has spent the previous 13 years in dirt.
