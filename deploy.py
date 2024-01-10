@@ -1,17 +1,25 @@
-""" Used to update connected Arduino.
+""" Copies source code to Pi, compiles sketch, flashes Arduino.
 """
 
 import os
 import paramiko
-import time
-import serial 
+from dotenv import load_dotenv
+
+load_dotenv()
+AIO_USER = os.getenv('AIO_USER')
+AIO_PASS = os.getenv('AIO_PASS')
+
+PI_IP = os.getenv('PI_IP')
+PI_USER = os.getenv('PI_USER')
+PI_PASS = os.getenv('PI_PASS')
+PI_PORT = os.getenv('PI_PORT')
 
 # ==============================================================================
 # SSH params:
-host = "192.168.0.33"
-port = 22
-username = "chris"
-password = 'ras75KAE'#input("SSH password?: ")
+host = PI_IP
+port = int(PI_PORT)
+username = PI_USER
+password = PI_PASS # input("SSH password?: ")
 # Sketch params:
 sketch_destination = "/home/chris/demeter"
 sketch_files = [
