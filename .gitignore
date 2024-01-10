@@ -1,4 +1,6 @@
 .env
-
+paramiko.log
+.vscode
+**.DS_Store
 
 

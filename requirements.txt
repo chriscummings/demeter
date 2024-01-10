@@ -1,0 +1,4 @@
+# Python Requirements file.
+
+paramiko
+python-dotenv

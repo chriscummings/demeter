@@ -23,9 +23,7 @@ Presently, it tracks:
 - redis
 - AdaFruit.IO
 
-The Arduino side is C and the Raspberry Pi side is Python 3. Tested on a 13 year old peace lilly.
-
-
+Tested on a 13 year old peace lilly.
 
 ## System Tour
 
@@ -63,8 +61,7 @@ The control board has 3 different DC voltage circuits:
 - pH sensor board
 - TDS sensor board
 
-
 ### Testing
 ![](./docs/bucket.png)
 
-Day 2. I currently tweaking the software, using a mature peace lily as a test subject.
+Day 2 of transplant shock..
