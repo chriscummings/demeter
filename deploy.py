@@ -8,18 +8,12 @@ from dotenv import load_dotenv
 load_dotenv()
 AIO_USER = os.getenv('AIO_USER')
 AIO_PASS = os.getenv('AIO_PASS')
-
-PI_IP = os.getenv('PI_IP')
 PI_USER = os.getenv('PI_USER')
 PI_PASS = os.getenv('PI_PASS')
-PI_PORT = os.getenv('PI_PORT')
+PI_PORT = int(os.getenv('PI_PORT'))
+PI_IP = os.getenv('PI_IP')
 
 # ==============================================================================
-# SSH params:
-host = PI_IP
-port = int(PI_PORT)
-username = PI_USER
-password = PI_PASS # input("SSH password?: ")
 # Sketch params:
 sketch_destination = "/home/chris/demeter"
 sketch_files = [
@@ -41,14 +35,14 @@ baudrate = 9600
 paramiko.util.log_to_file("paramiko.log")
 
 # SFTP
-transport = paramiko.Transport((host, port))
-transport.connect(None, username, password)
+transport = paramiko.Transport((PI_IP, PI_PORT))
+transport.connect(None, PI_USER, PI_PASS)
 sftp = paramiko.SFTPClient.from_transport(transport)
 
 # SSH
 ssh = paramiko.client.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-ssh.connect(host, port=port, username=username, password=password)
+ssh.connect(PI_IP, port=PI_PORT, username=PI_USER, password=PI_PASS)
 
 # Ensure parent directory.
 stdin, stdout, stderr = ssh.exec_command('mkdir ~/demeter')
