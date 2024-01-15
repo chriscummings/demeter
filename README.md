@@ -57,7 +57,6 @@ The control board has 3 different DC voltage circuits:
 - 128x64 OLED display
 - 8 channel relay board
 - 4 channel logic level shifter
-	- (no longer in use - while Serial communication via GPIO pins worked fine, I found I couldn't deploy sketches via the shifter without additional wiring modifications so I disconnected it and went back to relying on an actual USB cable between Arduino and Pi)
 - pH sensor board
 - TDS sensor board
 
