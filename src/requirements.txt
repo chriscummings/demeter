@@ -1,0 +1,7 @@
+# Python requirements file for RaspberryPi/Server
+
+pyserial
+python-dotenv
+adafruit-io
+redis
+RPi.GPIO
