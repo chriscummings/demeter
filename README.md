@@ -1,18 +1,3 @@
-move shared values into .env/.env.example like port and baudrate.
-
-log this somewhere..
-
-
-sudo apt-get install python3-pip
-python3 -m venv venv
-sudo apt-get install redis
-
-
-
-
-
-
-
 # Demeter
 
 Demeter is an Arduino & Raspberry Pi-based hydroponics robot.
@@ -74,8 +59,3 @@ The control board has 3 different DC voltage circuits:
 - 4 channel logic level shifter
 - pH sensor board
 - TDS sensor board
-
-### Testing
-![](./docs/bucket.png)
-
-Day 2 of transplant shock.. This peace lily has spent the previous 13 years in dirt.
